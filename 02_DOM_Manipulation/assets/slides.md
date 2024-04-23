@@ -15,9 +15,9 @@ width: 1400
 #### Learning Goals
 
 - Review what the DOM is
-- Explain what CRUD actions are
-- Observe how to do CRUD actions on the DOM
-- Explain how the DOM is able to read code written in JS files
+- Explain what CRUD actions are {.fragment}
+- Observe how to do CRUD actions on the DOM {.fragment}
+- Explain how the DOM is able to read code written in JS files {.fragment}
 
 ---
 
@@ -62,17 +62,17 @@ https://techcrunch.com/wp-content/uploads/2007/10/picture-242.png
 #### Tasks
 
 -  Select single DOM elements with:
-    - `.querySelector()` and 
-    - `.getElementById()`
+    - `.querySelector()`
+    - _or`.getElementById()`_
 -  Select multiple elements with:
-    - `.querySelectorAll()` and 
-    - `.getElementsByClassName()`
-- Add content with `.textContent=`
-- Create elements with `.createElement`
-- Append elements to the DOM with `.appendChild` and `.append`
-- Explain the dangers of `innerHTML=`
-- Remove content with `.remove`
-- Visit <a href="https://www.tvmaze.com/" rel="noopener noreferrer" target="_blank">TVMaze</a> to practice
+    - `.querySelectorAll()` 
+    - _or `.getElementsByClassName()`_
+- Add content with `.textContent=` or `.innerText=` {.fragment}
+- Create elements with `.createElement()` {.fragment}
+- Append elements to the DOM with `.appendChild()` and `.append()` {.fragment}
+- Explain the dangers of `innerHTML=` {.fragment}
+- Remove content with `.remove()` {.fragment}
+- Visit <a href="https://www.tvmaze.com/" rel="noopener noreferrer" target="_blank">TVMaze</a> to practice {.fragment}
 
 
 ---
@@ -80,9 +80,9 @@ https://techcrunch.com/wp-content/uploads/2007/10/picture-242.png
 #### Features
 
 - `renderHeader()`: renders the header content via JS
-- `renderFooter()`: renders the footer content via JS
-- `renderBook()`: create a list item for a book and inserts it into the list
-- `removeBook(index)`: removes a book li from the DOM by its index in the `ul`
+- `renderFooter()`: renders the footer content via JS {.fragment}
+- `renderBook()`: create a list item for a book and inserts it into the list {.fragment}
+- _NEXT LECTURE: `removeBook(index)`: removes a book li from the DOM by its index in the `ul`_ {.fragment}
 
 
 ---
