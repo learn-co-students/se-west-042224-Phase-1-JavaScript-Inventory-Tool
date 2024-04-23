@@ -73,7 +73,25 @@ const inventory = [
 */
 
 // Start here!
+function helloWorld() {
+  
+  return "Hello world!"
+}
 
+helloWorld()
+
+function helloFriend(nameStr){
+  // return "Hello, " + nameStr + "!" // string concatenation
+  return `Hello, ${nameStr}!` // string interpolation
+}
+
+console.log(helloFriend("Igor"))
+
+
+// function formatPrice(price){
+  //   // return `$${price}`
+  //   return '$' + Number.parseFloat(price).toFixed(2)
+// }
 
 
 
@@ -81,22 +99,51 @@ const inventory = [
 
 // ✅ create an arrow function version of the formatPrice function
 
+const formatPrice = (price) => '$' + Number.parseFloat(price).toFixed(2)
+const formatEuro = price => '€' + Number.parseFloat(price).toFixed(2)
 
-
+console.log(formatPrice(12))
 // ✅ create a blurb() function that accepts a book as an argument and logs a message in the following format:
 // 'Eloquent JavaScript: A Modern Introduction to Programming by Marjin Haverbeke is on sale for $10.00'
 
+const sampleBook = {
+  id: 1,
+  title: 'Eloquent JavaScript: A Modern Introduction to Programming',
+  author: 'Marjin Haverbeke',
+  price: 10.00,
+  reviews: [{userID: 1, content:'Good book, but not great for new coders'}],
+  inventory: 10,
+  imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51IKycqTPUL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg'
+}
 
+function blurb(bookObj){
+  const title = bookObj.title
+  const author = bookObj.author
+  const price = formatPrice(bookObj.price)
+  return `${title} by ${author} is on sale for ${price}`
+}
+console.log(blurb(sampleBook))
 
 // 💡 Difference between Block scope, Function scope, and Global scope
 
 // ✅ create a variable `highestPricedBook`
 
-
+// let highestPricedBook = inventory[0] // global scope 
 
 // ✅ create a function `findHighestPricedBook` that finds that book and returns it
 
+function findHighestPricedBook(bookArr){
+  let highestPricedBook = inventory[0] // function scope works
+  for (let bookObj of bookArr){
+    // let highestPricedBook = bookObj // return statement could not access
+    if (highestPricedBook.price < bookObj.price){
+      highestPricedBook = bookObj
+    }
+  }
+  return highestPricedBook
+}
 
+console.log(findHighestPricedBook(inventory))
 
 // After Break
 
@@ -106,18 +153,61 @@ const inventory = [
 
 // 💡 Practice using callbacks for iteration
 
+const prices = [23, 41, 19, 9.35, 11.15]
+
+function formatAsCurrency(priceArr, formatterCb) {
+  for (let price of priceArr) {
+    const formattedPrice = formatterCb(price)
+    console.log("🚀 ~ formatAsCurrency ~ formattedPrice:", formattedPrice)
+  }
+}
+formatAsCurrency(prices, formatPrice)
+formatAsCurrency(prices, formatEuro)
 
 
 // ✅ Create an array of the prices of all of the books
 
+function getBookPrice(bookObj){
+  return bookObj.price
+}
 
+// const bookPrices = inventory.map(getBookPrice)
+// const bookPrices = inventory.map(bookItem => getBookPrice(bookItem))
+const bookPrices = inventory.map(bookItem => bookItem.price)
+console.log("🚀 ~ bookPrices:", bookPrices)
 
 // ✅ Create an array of simplified book objects
+
+const simpleBooks = inventory.map(bookObj => {
+  return {
+    title: bookObj.title,
+    author: bookObj.author,
+    price: formatPrice(bookObj.price)
+  }
+})
+console.log("🚀 ~ simpleBooks ~ simpleBooks:", simpleBooks)
+
+
+
 
 
 
 // ✅ Create an array of strings from the inventory in the following format:
 // 'Eloquent JavaScript: A Modern Introduction to Programming by Marjin Haverbeke is on sale for $10.00'
 
+const allBlurbs = inventory.map(bookObj => blurb(bookObj))
+console.log("🚀 ~ allBlurbs:", allBlurbs)
+
 
 // 💡 When do I use forEach vs map?
+
+function printBlurbs(){
+  inventory.forEach(book => console.log(blurb(book)))
+}
+printBlurbs()
+
+const cheapBook = inventory.find(book => book.price < 10)
+console.log("🚀 ~ cheapBook:", cheapBook)
+
+const allCheapBooks = inventory.filter(book => book.price < 20)
+console.log("🚀 ~ allCheapBooks:", allCheapBooks)
