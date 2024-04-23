@@ -7,12 +7,12 @@
 - [ ] Use asynchronous JavaScript to retrieve data
 
 
-| Lecture                          | Notes | Videos | Starter | Solution | Slides |
-| -------------------------------- | :---: | ------ | ------- | -------- | ------ |
-| Functions & Scope                |       |        |         |          |        |
-| DOM Manipulation                 |       |        |         |          |        |
-| DOM Events                       |       |        |         |          |        |
-| Communicating with the Server    |       |        |         |          |        |
-| POST Requests                    |       |        |         |          |        |
-| PATCH & DELETE Requests          |       |        |         |          |        |
-| Communicating with External APIs |       |        |         |          |        |
+| Lecture                          |                                                        Notes                                                         | Videos      | Starter      | Solution      | Slides      |
+| -------------------------------- | :------------------------------------------------------------------------------------------------------------------: | ----------- | ------------ | ------------- | ----------- |
+| Functions & Scope                | [Notes](https://docs.google.com/document/d/1_zpuS3HaQoqdAnVL4dSTCmFpJqGXNGgKi8AzS_25S0I/edit#heading=h.soz4ebo9uzul) | [Video1](https://www.youtube.com/watch?v=BmVjGFeoOkw)/[Video2](https://www.youtube.com/watch?v=cikY3mX6Wik)  | [Starter](https://github.com/learn-co-students/se-west-042224-Phase-1-JavaScript-Inventory-Tool/tree/main) | [Solution](https://github.com/learn-co-students/se-west-042224-Phase-1-JavaScript-Inventory-Tool/tree/01_solution/01_Functions_%26_Scope) | [Slides](https://raw.githack.com/learn-co-students/se-west-042224-Phase-1-JavaScript-Inventory-Tool/main/01_Functions_&_Scope/assets/export/index.html) |
+| DOM Manipulation                 | [Notes](https://docs.google.com/document/d/1_zpuS3HaQoqdAnVL4dSTCmFpJqGXNGgKi8AzS_25S0I/edit#heading=h.soz4ebo9uzul) | [Video](# ) | [Starter](#) | [Solution](#) | [Slides](#) |
+| DOM Events                       | [Notes](https://docs.google.com/document/d/1_zpuS3HaQoqdAnVL4dSTCmFpJqGXNGgKi8AzS_25S0I/edit#heading=h.soz4ebo9uzul) | [Video](# ) | [Starter](#) | [Solution](#) | [Slides](#) |
+| Communicating with the Server    | [Notes](https://docs.google.com/document/d/1_zpuS3HaQoqdAnVL4dSTCmFpJqGXNGgKi8AzS_25S0I/edit#heading=h.soz4ebo9uzul) | [Video](# ) | [Starter](#) | [Solution](#) | [Slides](#) |
+| POST Requests                    | [Notes](https://docs.google.com/document/d/1_zpuS3HaQoqdAnVL4dSTCmFpJqGXNGgKi8AzS_25S0I/edit#heading=h.soz4ebo9uzul) | [Video](# ) | [Starter](#) | [Solution](#) | [Slides](#) |
+| PATCH & DELETE Requests          | [Notes](https://docs.google.com/document/d/1_zpuS3HaQoqdAnVL4dSTCmFpJqGXNGgKi8AzS_25S0I/edit#heading=h.soz4ebo9uzul) | [Video](# ) | [Starter](#) | [Solution](#) | [Slides](#) |
+| Communicating with External APIs | [Notes](https://docs.google.com/document/d/1_zpuS3HaQoqdAnVL4dSTCmFpJqGXNGgKi8AzS_25S0I/edit#heading=h.soz4ebo9uzul) | [Video](# ) | [Starter](#) | [Solution](#) | [Slides](#) |
