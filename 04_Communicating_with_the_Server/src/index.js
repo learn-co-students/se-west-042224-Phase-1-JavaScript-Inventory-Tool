@@ -1,10 +1,37 @@
+//////////////////////////////////////
+// Select elements (that will be referenced frequently)
+//////////////////////////////////////
+const toggleBookFormButton = document.querySelector("#toggleForm");
+const bookForm = document.querySelector("#book-form");
+
+//////////////////////////////////////
+// Helper functions
+//////////////////////////////////////
 function formatPrice(price) {
-  return '$' + Number.parseFloat(price).toFixed(2);
+  return "$" + Number.parseFloat(price).toFixed(2);
 }
 
-///////////////////
-// render functions
-///////////////////
+function fillIn(form, data) {
+  form.title.value = data.title;
+  form.author.value = data.author;
+  form.price.value = data.price;
+  form.imageUrl.value = data.imageUrl;
+  form.inventory.value = data.inventory;
+}
+
+fillIn(bookForm, {
+  title: "Designing Data-intensive Applications",
+  author: "Martin Kleppmann",
+  price: 22,
+  inventory: 1,
+  imageUrl:
+    "https://m.media-amazon.com/images/I/51ZSpMl1-LL._SX379_BO1,204,203,200_.jpg",
+});
+
+
+/////////////////////////////////////
+// render functions (Data => Display)
+/////////////////////////////////////
 function renderHeader(bookStore) {
   document.querySelector('#store-name').textContent = bookStore.name;
 }
@@ -13,6 +40,11 @@ function renderFooter(bookStore) {
   document.querySelector('#address').textContent = bookStore.address;
   document.querySelector('#number').textContent = bookStore.number;
   document.querySelector('#store').textContent = bookStore.location;
+}
+
+function renderAllBooks(bookStore) {
+  // bookStore.inventory.forEach(book => renderBook(book));
+  bookStore.inventory.forEach(renderBook); // this syntax is shorthand for line above
 }
 
 // function: renderBook(book)
@@ -76,8 +108,7 @@ function renderBook(book) {
 // Event Listeners/Handlers (Behavior => Data => Display)
 ////////////////////////////////////////////////////////////////
 
-const toggleBookFormButton = document.querySelector('#toggleForm')
-const bookForm = document.querySelector('#book-form');
+
 
 function toggleBookForm() {
   const bookFormHidden = bookForm.classList.toggle('collapsed');
@@ -89,21 +120,21 @@ function toggleBookForm() {
 }
 
 // hide and show the new book form when toggle buton is clicked
-toggleBookFormButton.addEventListener('click', (e) => {
+toggleBookFormButton.addEventListener('click', () => {
   toggleBookForm();
 });
 
 // also hide the form when it's visible and the escape key is pressed
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    if (!bookForm.classList.contains('collapsed')) {
-      toggleBookForm();
-    }
+  const isVisible = !bookForm.classList.contains("collapsed");
+  if (isVisible && e.code == "Escape") {
+    toggleBookForm();
   }
 })
 
 // handle submitting new book form
-bookForm.addEventListener('submit', (e) => {
+
+function handleSubmit(e){
   e.preventDefault();
 
   const book = {
@@ -118,7 +149,8 @@ bookForm.addEventListener('submit', (e) => {
   e.target.reset(); // clear form
   toggleBookForm(); // hide book form
   renderBook(book); // display new book to DOM
-})
+}
+bookForm.addEventListener('submit', handleSubmit)
 
 
 
@@ -128,7 +160,7 @@ bookForm.addEventListener('submit', (e) => {
 
 renderHeader(bookStore)
 renderFooter(bookStore)
-bookStore.inventory.forEach(renderBook)
+renderAllBooks(bookStore)
 
 
 
