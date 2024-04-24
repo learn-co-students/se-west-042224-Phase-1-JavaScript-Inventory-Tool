@@ -23,11 +23,11 @@ input {
 ### Lecture Goals
 
 - Explain the importance of event handling in modern web applications
-- Explain how callback functions are used with event listeners
-- Observe how to add a form to a webpage using HTML and JavaScript
-- Observe how onSubmit events are used to receive information from Users via forms
-- Explain the purpose of the `.preventDefault()` method
-- Use MDN to discover and interact with JavaScript events
+- Explain how callback functions are used with event listeners { .fragment }
+- Observe how to add a form to a webpage using HTML and JavaScript  { .fragment }
+- Observe how onSubmit events are used to receive information from Users via forms { .fragment }
+- Explain the purpose of the `.preventDefault()` method { .fragment }
+- Use MDN to discover and interact with JavaScript events { .fragment }
 
 
 ---
@@ -72,9 +72,9 @@ input {
 ### In Practice
 
 - Identify event type
-- Identify event target
-- Add event listener for target and specify type (as first argument)
-- add logic to handle the event to event handler callback (as second argument)
+- Identify event target {.fragment}
+- Add event listener for target and specify type (as first argument) {.fragment}
+- add logic to handle the event to event handler callback (as second argument) {.fragment}
 
 ---
 
