@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="libs/reveal.js/4.3.1/reset.css">
   <link rel="stylesheet" href="libs/reveal.js/4.3.1/reveal.css">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <!-- highlight Theme -->
   
@@ -50,7 +51,7 @@
 
    <!-- css list -->
 	
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   
 
    
@@ -91,16 +92,16 @@ input {
             <h2>Lecture Goals</h2>
 <ul>
 <li>Explore the request-response cycle</li>
-<li>Review the differences between Server and Client</li>
-<li>List the different HTTP Verbs + corresponding actions</li>
-<li>Observe how to send GET requests using <code>.fetch()</code></li>
-<li>Explain what Asynchronous means in JavaScript</li>
-<li>Explain why Promises are important in JavaScript</li>
-<li>Observe:
+<li class="fragment">Review the differences between Server and Client</li>
+<li class="fragment">List the different HTTP Verbs + corresponding actions</li>
+<li class="fragment">Observe how to send GET requests using <code>.fetch()</code></li>
+<li class="fragment">Explain what Asynchronous means in JavaScript</li>
+<li class="fragment">Explain why Promises are important in JavaScript</li>
+<li class="fragment">Observe:
 <ul>
-<li>Handling promises and errors using <code>.then()</code> and <code>.catch()</code></li>
-<li>Using json-server to create a local API</li>
-<li>Rendering data to the browser window after a fetch request</li>
+<li class="fragment">Handling promises and errors using <code>.then()</code> and <code>.catch()</code></li>
+<li class="fragment">Using json-server to create a local API</li>
+<li class="fragment">Rendering data to the browser window after a fetch request</li>
 </ul>
 </li>
 </ul>
@@ -118,22 +119,30 @@ input {
   alt="Client and Server communication" 
   style="width: 100%;"
 /></p>
-<aside class="notes">
-<p>Client</p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <p>Client</p>
 <ul>
-<li>User interface</li>
-<li>Responsible for styling, layout, and event functionality</li>
-<li>Lightweight and loads fast</li>
-<li>Acts as a “template” for dynamic data</li>
-<li>Makes requests to the server</li>
+<li class="fragment">User interface</li>
+<li class="fragment">Responsible for styling, layout, and event functionality</li>
+<li class="fragment">Lightweight and loads fast</li>
+<li class="fragment">Acts as a “template” for dynamic data  </li>
+<li class="fragment">Makes requests to the server </li>
 </ul>
 <p>Server</p>
 <ul>
-<li>Responsible for data storage and management</li>
-<li>Changes in data may be triggered by the client, but the actual change is handled by the server-side</li>
-<li>Sends a response back to the server</li>
+<li class="fragment">Responsible for data storage and management</li>
+<li class="fragment">Changes in data may be triggered by the client, but the actual change is handled by the server-side</li>
+<li class="fragment">Sends a response back to the server</li>
 </ul>
-</aside>
+
             </section>
     
 
@@ -149,18 +158,26 @@ input {
   style="width: 80%;"
 /></p>
 <p><small>Image from <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">MDN’s HTTP Overview</a></small></p>
-<aside class="notes">
-<p>HTTP is:</p>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <p>HTTP is:</p>
 <ul>
-<li>Language protocol used to communicate between the server and client</li>
-<li>Used for fetching resources</li>
-<li>Data exchange</li>
-<li>Readable</li>
-<li>Stateless</li>
-<li>Has sessions</li>
+<li class="fragment">Language protocol used to communicate between the server and client </li>
+<li class="fragment">Used for fetching resources from the server</li>
+<li class="fragment">Data exchange </li>
+<li class="fragment">Readable </li>
+<li class="fragment">Stateless </li>
+<li class="fragment">Has sessions</li>
 </ul>
 <p>Open devtools in Chrome for the slideshow and demo the network tab.</p>
-</aside>
+
             </section>
     
 
@@ -253,8 +270,16 @@ input {
             <h3>Synchronous vs Asynchronous code explained</h3>
 <img src="https://cdn-images-1.medium.com/max/749/0*arL3BF9VGPooOPIT" alt="Synchronous vs Asynchronous code diagram" />
 <p><small>Image source: <a href="https://laptrinhx.com/javascript-promises-a-zendesk-introduction-173205527/" rel="noopener noreferrer" target="_blank">Laptrinx.com</a></small></p>
-<aside class="notes">
-<ul>
+
+            </section>
+    
+
+
+
+    
+        <section >
+            
+            <ul>
 <li>When we order food at a restaurant, the chefs don’t wait till one dish is completely ready before starting on the next one.</li>
 <li>They take in the orders from the wait staff and complete them with priorities in mind.</li>
 <li>They’ll finish appetizers first and they may also be dealing with meals ordered by other customers at the same time</li>
@@ -262,7 +287,7 @@ input {
 <li>Whoever ordered first would end up with cold food! :(</li>
 <li>Instead, orders are handled asynchronously, this means that appetizers can be delivered when they’re ready, potentially a couple at a time</li>
 </ul>
-</aside>
+
             </section>
     
 

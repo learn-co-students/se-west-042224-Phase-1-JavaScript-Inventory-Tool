@@ -23,15 +23,15 @@ input {
 ## Lecture Goals
 
 - Explore the request-response cycle
-- Review the differences between Server and Client
-- List the different HTTP Verbs + corresponding actions
-- Observe how to send GET requests using `.fetch()`
-- Explain what Asynchronous means in JavaScript
-- Explain why Promises are important in JavaScript
-- Observe: 
-  - Handling promises and errors using `.then()` and `.catch()`
-  - Using json-server to create a local API
-  - Rendering data to the browser window after a fetch request
+- Review the differences between Server and Client {.fragment}
+- List the different HTTP Verbs + corresponding actions {.fragment}
+- Observe how to send GET requests using `.fetch()` {.fragment}
+- Explain what Asynchronous means in JavaScript {.fragment}
+- Explain why Promises are important in JavaScript {.fragment}
+- Observe: {.fragment} 
+  - Handling promises and errors using `.then()` and `.catch()` {.fragment}
+  - Using json-server to create a local API {.fragment}
+  - Rendering data to the browser window after a fetch request {.fragment}
 
 ---
 
@@ -41,23 +41,22 @@ input {
   style="width: 100%;"
 />
 
-<aside class="notes">
+---
 
 Client
-- User interface
-- Responsible for styling, layout, and event functionality
-- Lightweight and loads fast
-- Acts as a “template” for dynamic data 
-- Makes requests to the server
+- User interface {.fragment}
+- Responsible for styling, layout, and event functionality {.fragment}
+- Lightweight and loads fast {.fragment}
+- Acts as a “template” for dynamic data   {.fragment}
+- Makes requests to the server  {.fragment}
 
 Server
-- Responsible for data storage and management
-- Changes in data may be triggered by the client, but the actual change is handled by the server-side
-- Sends a response back to the server
-
-</aside>
+- Responsible for data storage and management {.fragment}
+- Changes in data may be triggered by the client, but the actual change is handled by the server-side {.fragment}
+- Sends a response back to the server {.fragment}
 
 ---
+
 
 ### HTTP Protocol
 
@@ -69,20 +68,17 @@ Server
 
 <small>Image from [MDN's HTTP Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)</small>
 
-<aside class="notes">
+---
 
 HTTP is:
-- Language protocol used to communicate between the server and client 
-- Used for fetching resources
-- Data exchange 
-- Readable 
-- Stateless 
-- Has sessions
+- Language protocol used to communicate between the server and client  {.fragment}
+- Used for fetching resources from the server {.fragment}
+- Data exchange  {.fragment}
+- Readable  {.fragment}
+- Stateless  {.fragment}
+- Has sessions {.fragment}
 
 Open devtools in Chrome for the slideshow and demo the network tab.
-
-</aside>
-
 
 ---
 
@@ -137,7 +133,7 @@ Method | CRUD Action | Description
 
 <small>Image source: <a href="https://laptrinhx.com/javascript-promises-a-zendesk-introduction-173205527/" rel="noopener noreferrer" target="_blank">Laptrinx.com</a></small>
 
-<aside class="notes">
+---
 
 - When we order food at a restaurant, the chefs don't wait till one dish is completely ready before starting on the next one. 
 - They take in the orders from the wait staff and complete them with priorities in mind. 
@@ -146,7 +142,6 @@ Method | CRUD Action | Description
 - Whoever ordered first would end up with cold food! :( 
 - Instead, orders are handled asynchronously, this means that appetizers can be delivered when they're ready, potentially a couple at a time
 
-</aside>
 
 ---
 
