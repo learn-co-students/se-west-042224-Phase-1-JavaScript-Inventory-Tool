@@ -237,5 +237,11 @@ fillIn(storeForm, {
   hours: "Monday - Friday 9am - 6pm"
 })
 
-
+fillIn(bookForm, {
+  title: "Designing Data-Intenseive Applications",
+  author: "Martin Kleppmann",
+  price: 22.20,
+  imageUrl: 'https://m.media-amazon.com/images/I/51ZSpMl1-LL._SX379_BO1,204,203,200_.jpg',
+  inventory: 1
+})
 
