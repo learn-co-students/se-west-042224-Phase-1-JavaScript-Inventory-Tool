@@ -42,9 +42,9 @@ function renderFooter(bookStore) {
   document.querySelector('#store').textContent = bookStore.location;
 }
 
-function renderAllBooks(bookStore) {
+function renderAllBooks(booksArr) {
   // bookStore.inventory.forEach(book => renderBook(book));
-  bookStore.inventory.forEach(renderBook); // this syntax is shorthand for line above
+  booksArr.forEach(renderBook); // this syntax is shorthand for line above
 }
 
 // function: renderBook(book)
@@ -103,6 +103,14 @@ function renderBook(book) {
   document.querySelector('#book-list').append(li);
 }
 
+function renderError(error){
+  console.log("🚀 ~ renderError ~ error:", error)
+  const errDiv = document.createElement('div')
+  errDiv.classList.add('error')
+  errDiv.textContent = error
+  document.querySelector('main').append(errDiv)
+}
+
 
 ////////////////////////////////////////////////////////////////
 // Event Listeners/Handlers (Behavior => Data => Display)
@@ -158,9 +166,57 @@ bookForm.addEventListener('submit', handleSubmit)
 // call render functions to populate the DOM
 ////////////////////////////////////////////
 
-renderHeader(bookStore)
-renderFooter(bookStore)
-renderAllBooks(bookStore)
+// renderHeader(bookStore)
+// renderFooter(bookStore)
+// renderAllBooks(bookStore)
 
 
+////////////////////////////////////////////
+// Communicating with the Server (via .fetch) -> then update the DOM
+////////////////////////////////////////////
 
+// const request = fetch('http://localhost:3000/books')
+// console.log("🚀 ~ request:", request)
+// fetch('http://localhost:3000/books') // returns a Promise
+//   .then(response => { // result is a Response obj
+//     console.log(response) // Response.body is a 'readable stream'
+//     return response.json() // .json returns a Promise
+//   })
+//   .then(data => console.log(data)) // Promise result is JSON
+
+fetch('http://localhost:3000/books')
+  .then(res => res.json())
+  .then(booksArr => renderAllBooks(booksArr))
+  .catch(renderError)
+
+fetch('http://localhost:3000/stores/1')
+  .then(res => {
+    if (res.ok) { // some status codes that aren't 'ok' will not raise errors, so we need
+      return res.json() // to create our own conditional and raise our own error
+    } else {
+      throw new Error(res.statusText)
+    }
+  })
+  .then(storeObj => {
+    renderHeader(storeObj)
+    renderFooter(storeObj)
+  })
+  .catch(renderError)
+
+  ////////////////////////////
+  // another example
+  ///////////////////////////
+
+  let requestedTodo; // declaring a variable in global scope w/o assignment
+  console.log("🚀 ~ requestedTodo:", requestedTodo)
+  
+  const result = fetch('https://jsonplaceholder.typicode.com/todos/1') // fetch returns a Promise
+  .then(response => { // Promise result is a Response obj
+    console.log(response)
+    return response.json() // .json() returns a Promise
+  })
+  .then(todoJSON => { // Promise result is JSON
+    requestedTodo = todoJSON // assign result to global variable to get data out of this callback
+    console.log("🚀 ~ requestedTodo:", requestedTodo)
+  })
+  console.log("🚀 ~ result:", result)

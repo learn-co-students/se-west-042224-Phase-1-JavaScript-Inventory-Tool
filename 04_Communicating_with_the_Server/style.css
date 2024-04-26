@@ -21,14 +21,14 @@ header {
   border-color: #103f22;
 }
 
-header div h1, header div h2 {
+header h1, header h2 {
   text-align: center;
   color: aliceblue;
   text-shadow: 2px 4px #252525;
   font-family: Verdana;
 }
 
-header div h2 {
+header h2 {
   color: aliceblue;
   font-style: italic;
 }
@@ -102,6 +102,7 @@ input[type=submit] {
   padding: 3px;
   font-size: large;
   font-weight: bold;
+  cursor: pointer;
 }
 
 button, [type="submit"] {
@@ -130,4 +131,8 @@ footer {
   height: 30px;
   width: 100%;
   margin: 3px;
+}
+
+.error {
+  color: red;
 }
