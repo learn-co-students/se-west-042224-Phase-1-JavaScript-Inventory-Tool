@@ -4,7 +4,7 @@
       "id": 1,
       "location": "Seattle",
       "address": "333 st ne Seattle wa 99999",
-      "number": 9999999999,
+      "number": "9999999999",
       "name": "Easley's Technical Books",
       "hours": "Monday - Friday 9am - 6pm"
     },
@@ -19,10 +19,18 @@
     {
       "id": 3,
       "location": "Los Angeles",
-      "address": "2525 drive Los Angeles CA 90002",
-      "number": 5554443333,
-      "name": "Tech BooksRus",
+      "address": "2525 Drive Los Angeles CA 90002",
+      "number": "7017654321",
+      "name": "Tech Books-R-Us",
       "hours": "Thursday - Saturday 11am - 7pm"
+    },
+    {
+      "name": "Ada's Technical Books",
+      "address": "15th Ave S 98111",
+      "number": "98765453321",
+      "hours": "24/7",
+      "location": "Seattle",
+      "id": 4
     }
   ],
   "books": [
@@ -37,7 +45,7 @@
           "content": "Good book, but not great for new coders"
         }
       ],
-      "inventory": "15",
+      "inventory": 16,
       "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51IKycqTPUL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg"
     },
     {
@@ -51,7 +59,7 @@
           "content": "good way to learn JQuery"
         }
       ],
-      "inventory": 2,
+      "inventory": 9,
       "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/31SRWF+LkKL._SX398_BO1,204,203,200_.jpg"
     },
     {
